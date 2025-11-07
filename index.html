@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #010417;
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #0A1760;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 40px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .site-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .site-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .site-card:hover::before {
+            opacity: 1;
+        }
+
+        .site-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0A1760, #1a237e);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .site-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            position: relative;
+            z-index: 1;
+        }
+
+        .site-description {
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .site-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #0A1760, #1a237e);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .site-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #1a237e, #0A1760);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #ffffff, #64b5f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .header p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .site-card {
+                margin: 0 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">Link Collection</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="header">
+            <h1>Koleksi Link Premium</h1>
+            <p>24 Link Alternatif Terbaik untuk Akses Tanpa Batas</p>
+        </div>
+
+        <div class="grid-container">
+            <!-- Card 1 -->
+            <div class="site-card">
+                <div class="site-icon">👑</div>
+                <h2 class="site-title">Link VIP Elite</h2>
+                <p class="site-description">Akses VIP dengan layanan premium 24/7</p>
+                <a href="https://ganteng.netlify.app/" class="site-link">VIP Access</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="site-card">
+                <div class="site-icon">⚡</div>
+                <h2 class="site-title">Link Super Fast</h2>
+                <p class="site-description">Koneksi super cepat & stabil</p>
+                <a href="https://amp-interwin.netlify.app/" class="site-link">Fast Login</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="site-card">
+                <div class="site-icon">🌟</div>
+                <h2 class="site-title">Link Viral Plus</h2>
+                <p class="site-description">Link terpopuler dengan bonus spesial</p>
+                <a href="https://viralinterwin.netlify.app/" class="site-link">Join Now</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="site-card">
+                <div class="site-icon">💎</div>
+                <h2 class="site-title">Link Deposit Pro</h2>
+                <p class="site-description">Transaksi cepat dan aman 24 jam</p>
+                <a href="https://depo-interwin.netlify.app/" class="site-link">Deposit</a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="site-card">
+                <div class="site-icon">🎯</div>
+                <h2 class="site-title">Link Pro Win</h2>
+                <p class="site-description">Sistem winrate tertinggi</p>
+                <a href="https://anternatif-winpro-slot.netlify.app/" class="site-link">Play Now</a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="site-card">
+                <div class="site-icon">🔐</div>
+                <h2 class="site-title">Link Anti Block</h2>
+                <p class="site-description">Akses tanpa hambatan 24/7</p>
+                <a href="https://alternatif-link-interwin.netlify.app/" class="site-link">Access</a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="site-card">
+                <div class="site-icon">🎮</div>
+                <h2 class="site-title">Link Gaming Pro</h2>
+                <p class="site-description">Pengalaman gaming terbaik</p>
+                <a href="https://asupanlokal.netlify.app/" class="site-link">Play</a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="site-card">
+                <div class="site-icon">🏆</div>
+                <h2 class="site-title">Link Champion</h2>
+                <p class="site-description">Untuk para juara sejati</p>
+                <a href="https://interwinasupanlokal.netlify.app/" class="site-link">Join Elite</a>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="site-card">
+                <div class="site-icon">🎰</div>
+                <h2 class="site-title">Link Slot Pro</h2>
+                <p class="site-description">Slot gacor maxwin</p>
+                <a href="https://slotjago-interwin.netlify.app/" class="site-link">Play Slot</a>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="site-card">
+                <div class="site-icon">⭐</div>
+                <h2 class="site-title">Link Pro Max</h2>
+                <p class="site-description">Maxwin dengan RTP tertinggi</p>
+                <a href="https://slot-interwinpro.netlify.app/" class="site-link">Max Win</a>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="site-card">
+                <div class="site-icon">🚀</div>
+                <h2 class="site-title">Link Express</h2>
+                <p class="site-description">Akses super cepat 24 jam</p>
+                <a href="https://seo-interwinpro.netlify.app/" class="site-link">Express</a>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="site-card">
+                <div class="site-icon">💫</div>
+                <h2 class="site-title">Link Premium</h2>
+                <p class="site-description">Layanan premium terbaik</p>
+                <a href="https://sicantik.netlify.app/" class="site-link">Premium</a>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="site-card">
+                <div class="site-icon">🎬</div>
+                <h2 class="site-title">Link Non-Stop</h2>
+                <p class="site-description">24 jam non-stop akses</p>
+                <a href="https://filmindoviral24jam.netlify.app/" class="site-link">24/7</a>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="site-card">
+                <div class="site-icon">🎲</div>
+                <h2 class="site-title">Link Seru Pro</h2>
+                <p class="site-description">Permainan seru dan menguntungkan</p>
+                <a href="https://gameinterwinseru.netlify.app/" class="site-link">Play</a>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="site-card">
+                <div class="site-icon">👑</div>
+                <h2 class="site-title">Link VIP Plus</h2>
+                <p class="site-description">Eksklusif untuk member VIP</p>
+                <a href="https://interwinvip.netlify.app/" class="site-link">VIP</a>
+            </div>
+
+            <!-- Card 16 -->
+            <div class="site-card">
+                <div class="site-icon">🌏</div>
+                <h2 class="site-title">Link Asia Pro</h2>
+                <p class="site-description">Server Asia terbaik & stabil</p>
+                <a href="https://interwinasia.netlify.app/" class="site-link">Join</a>
+            </div>
+
+            <!-- Card 17 -->
+            <div class="site-card">
+                <div class="site-icon">🎯</div>
+                <h2 class="site-title">Link Gacor</h2>
+                <p class="site-description">Dijamin gacor maxwin</p>
+                <a href="https://interwingacor.netlify.app/" class="site-link">Gacor</a>
+            </div>
+
+            <!-- Card 18 -->
+            <div class="site-card">
+                <div class="site-icon">🔥</div>
+                <h2 class="site-title">Link Pro Win</h2>
+                <p class="site-description">Win rate tinggi terjamin</p>
+                <a href="https://anternatif-interwinprowin.netlify.app/" class="site-link">Win</a>
+            </div>
+
+            <!-- Card 19 -->
+            <div class="site-card">
+                <div class="site-icon">💎</div>
+                <h2 class="site-title">Link Gacor Pro</h2>
+                <p class="site-description">Pro player recommended</p>
+                <a href="https://akungacorinterwin.netlify.app/" class="site-link">Pro</a>
+            </div>
+
+            <!-- Card 20 -->
+            <div class="site-card">
+                <div class="site-icon">🎰</div>
+                <h2 class="site-title">Link Indo Slot</h2>
+                <p class="site-description">Slot online terpercaya</p>
+                <a href="https://indoslot-interwinpro.netlify.app/" class="site-link">Play</a>
+            </div>
+
+            <!-- Card 21 -->
+            <div class="site-card">
+                <div class="site-icon">🔄</div>
+                <h2 class="site-title">Link Alternative</h2>
+                <p class="site-description">Link alternatif anti nawala</p>
+                <a href="https://interwinpro-alternatif.netlify.app/" class="site-link">Access</a>
+            </div>
+
+            <!-- Card 22 -->
+            <div class="site-card">
+                <div class="site-icon">🌐</div>
+                <h2 class="site-title">Link Online Pro</h2>
+                <p class="site-description">Akses online terpercaya</p>
+                <a href="https://interwinonlinepro.netlify.app/" class="site-link">Online</a>
+            </div>
+
+            <!-- Card 23 -->
+            <div class="site-card">
+                <div class="site-icon">⚡</div>
+                <h2 class="site-title">Link Gacor Elite</h2>
+                <p class="site-description">Sensasi bermain maksimal</p>
+                <a href="https://anternatif-interwin-gacor.netlify.app/" class="site-link">Elite</a>
+            </div>
+
+            <!-- Card 24 -->
+            <div class="site-card">
+                <div class="site-icon">🎉</div>
+                <h2 class="site-title">Link November</h2>
+                <p class="site-description">Update terbaru bulan ini</p>
+                <a href="https://interwin-november.netlify.app/" class="site-link">New</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
