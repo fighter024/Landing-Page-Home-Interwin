@@ -27,12 +27,14 @@
 
         nav {
             background-color: #0A1760;
-            padding: 1rem;
+            padding: 0.5rem;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            height: auto;
+            min-height: 60px;
         }
 
         .nav-content {
@@ -95,7 +97,8 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 100px 20px 40px;
+            padding: 20px;
+            margin-top: 120px;
         }
 
         .grid-container {
@@ -314,7 +317,17 @@
             }
 
             nav {
-                padding: 0.75rem;
+                padding: 0.5rem;
+                min-height: 90px;
+            }
+            
+            .container {
+                margin-top: 140px;
+                padding-top: 0;
+            }
+
+            .header {
+                padding-top: 0;
             }
 
             .footer-content {
